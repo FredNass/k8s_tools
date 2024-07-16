@@ -1,6 +1,6 @@
 #!/bin/bash
-# This script allows changing the access mode (RWO or RWX) of a PVC and changing the mounter type (kernel or fuse) of a Cephfs PV.
-# To do this, it stops the Deployments and StatefulSets of an application, sets the PV to Retain, deletes the PVC and PV, and recreates them with updated values and same volume paths.
+# This script allows changing the access mode (RWO or RWX) and the mounter type (kernel or fuse) of a Cephfs PV.
+# To do this, it stops all Deployments and StatefulSets of an application (in a namespace), sets the PV to Retain, deletes the PVC and PV, and recreates them with updated values and same volume paths.
 
 set -euo pipefail
 
